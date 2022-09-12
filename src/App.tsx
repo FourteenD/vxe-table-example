@@ -424,7 +424,6 @@ export default defineComponent({
         showStatus: true,
       },
     });
-
     onMounted(() => {
       const sexList = [
         { label: "女", value: "0" },
