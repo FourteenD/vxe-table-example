@@ -22,6 +22,12 @@ export default defineComponent({
       columnConfig: {
         resizable: true,
       },
+      treeConfig: {
+        transform: true,
+        rowField: "id",
+        parentField: "parentId",
+        expandAll: true,
+      },
       customConfig: {
         storage: true,
         checkMethod({ column }) {
@@ -212,7 +218,7 @@ export default defineComponent({
         },
       },
       columns: [
-        { type: "checkbox", title: "ID", width: 120 },
+        { type: "checkbox", title: "ID", width: 120, treeNode: true },
         {
           field: "name",
           title: "Name",
@@ -265,7 +271,6 @@ export default defineComponent({
         {
           field: "age",
           title: "Age",
-          visible: false,
           sortable: true,
           editRender: {
             name: "$input",
@@ -291,7 +296,6 @@ export default defineComponent({
           field: "updateDate",
           title: "Update Date",
           width: 160,
-          visible: false,
           sortable: true,
           formatter({ cellValue }) {
             return XEUtils.toDateString(cellValue, "yyyy-MM-dd HH:ss:mm");
@@ -301,7 +305,6 @@ export default defineComponent({
           field: "createDate",
           title: "Create Date",
           width: 160,
-          visible: false,
           sortable: true,
           formatter({ cellValue }) {
             return XEUtils.toDateString(cellValue, "yyyy-MM-dd");
