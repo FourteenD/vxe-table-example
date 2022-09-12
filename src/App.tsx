@@ -1,5 +1,5 @@
 import { defineComponent, reactive, ref } from "vue";
-import { VXETable, VxeGridInstance, VxeGridProps } from "vxe-table";
+import { VxeGridInstance, VxeGridProps } from "vxe-table";
 
 export default defineComponent({
   setup() {
